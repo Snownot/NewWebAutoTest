@@ -20,19 +20,12 @@ public class DictionaryPage extends PageObject {
     private WebElementFacade searchLoginButton;
 
     public void enterKeywords(String key, String keyword) {
-        getSearchElement(key).type(keyword);
+
     }
 
-    private Converter<WebElement, String> toStrings() {
-        return new Converter<WebElement, String>() {
-            public String convert(WebElement from) {
-                return from.getText();
-            }
-        };
-    }
 
     public void clickButton(String keyword) {
-        getSearchElement(keyword).click();
+
     }
 
 

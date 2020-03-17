@@ -1,8 +1,9 @@
 spring:
   datasource:
-    url: jdbc:jtbs:sqlserver//192.168.31.105/EasiShare_DB_T
+    url: jdbc:jtds:sqlserver://192.168.31.105:1433/EasiShare_DB_T
     password: sa
     username: p@ssw0rd
+    driver-class-name: net.sourceforge.jtds.jdbc.Driver
   jpa:
     hibernate:
       ddl-auto: validate
