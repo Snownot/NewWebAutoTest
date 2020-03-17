@@ -1,16 +1,20 @@
 spring:
   datasource:
-    url: jdbc:jtds:sqlserver://192.168.31.105:1433/EasiShare_DB_T
-    password: sa
-    username: p@ssw0rd
-    driver-class-name: net.sourceforge.jtds.jdbc.Driver
+    url: jdbc:sqlserver://esupgradetest.southeastasia.cloudapp.azure.com:1433;databaseName=EasiShare_DB
+    password: p@ssw0rd
+    username: sa
+    driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
   jpa:
+    show-sql: true
     hibernate:
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
       ddl-auto: validate
+      use-new-id-generator-mappings: false
     properties:
-      hibernate:
-        ## SQL logging
-        #        show_sql: true
-        #        format_sql: false
         hibernate:
-          dialect: org.hibernate.dialect.SQLServerDialect
+          default_schema: dbo
+          default_catalog: EasiShare_DB
+          dialect: org.hibernate.dialect.SQLServer2012Dialect
+  
+

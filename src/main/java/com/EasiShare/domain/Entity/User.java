@@ -11,23 +11,21 @@ import java.util.Date;
 public class User {
 
     @Id
-    @GeneratedValue
-    @Column(name = "UserID")
-    private Long id;
-
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @NotNull
-    @NotEmpty
-    @Size(min = 2)
-    @Column(name = "Username")
+    @Column(name = "UserID")
+    private int id;
+
+    @Column(name = "Username", columnDefinition = "nvarchar")
     private String userName;
 
-    @Column(name = "Fullname")
+    @Column(name = "Fullname", columnDefinition = "nvarchar")
     private String fullName;
 
     @Column(name = "IsExternal")
     private boolean isExternal;
 
-    @Column(name = "Mobile")
+    @Column(name = "Mobile", columnDefinition = "nvarchar")
     private String mobile;
 
     @Column(name = "Status")
@@ -45,13 +43,13 @@ public class User {
     @Column(name = "MustChangePassword")
     private boolean mustChangePassword;
 
-    @Column(name = "Email")
+    @Column(name = "Email" , columnDefinition = "nvarchar")
     private String email;
 
     @Column(name = "IsAdmin")
     private boolean isAdmin;
 
-    @Column(name = "CompamnyId")
+    @Column(name = "CompanyId")
     private int companyId;
 
     @Column(name = "InvalidAttempts")
@@ -63,13 +61,13 @@ public class User {
     @Column(name = "LastAccess")
     private Date lastAccess;
 
-    @Column(name = "Policy")
+    @Column(name = "Policy", columnDefinition = "nvarchar")
     private String policy;
 
     @Column(name = "ReminderSentAt")
     private Date reminderSentAt;
 
-    @Column(name = "Properties")
+    @Column(name = "Properties", columnDefinition = "nvarchar")
     private String properties;
 
     @Column(name = "ExpiryAt")
@@ -84,10 +82,10 @@ public class User {
     @Column(name = "PersonalDrive")
     private int personalDrive;
 
-    @Column(name = "ADAccountName")
+    @Column(name = "ADAccountName", columnDefinition = "nvarchar")
     private String adAccountName;
 
-    @Column(name = "AdminRoles")
+    @Column(name = "AdminRoles", columnDefinition = "nvarchar")
     private String adminRoles;
 
     @Column(name = "LastUserDeactNotifSentTime")
@@ -99,6 +97,6 @@ public class User {
     @Column(name = "LastPwdExpNotifSentTime")
     private Date lastPwdExpNotifSentTime;
 
-    @Column(name = "Department")
+    @Column(name = "Department", columnDefinition = "nvarchar")
     private Date department;
 }
