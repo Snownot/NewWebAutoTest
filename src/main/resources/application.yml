@@ -1,17 +1,15 @@
 spring:
-  jpa:
-    show-sql: true
-    hibernate:
-      ddl-auto: ${HIBERNATE_DDL_AUTO:update}
-    properties:
-      hibernate.jdbc.batch_size: 20
-      hibernate.cache.use_query_cache: false
-      hibernate.cache.use_second_level_cache: false
-      hibernate.cache.use_structured_entries: false
-      hibernate.cache.use_minimal_puts: false
   datasource:
-    #SPRING_DATASOURCE_URL environment variable will be something like -> jdbc:sqlserver://MySqlServer\\MyInstance:1433;DatabaseName=MyDbName;
-    url: ${SPRING_DATASOURCE_URL}
-    username: ${SPRING_DATASOURCE_USERNAME}
-    password: ${SPRING_DATASOURCE_PASSWORD}
-    driverClassName: com.microsoft.sqlserver.jdbc.SQLServerDriver
+    url: jdbc:jtbs:sqlserver//192.168.31.105/EasiShare_DB_T
+    password: sa
+    username: p@ssw0rd
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    properties:
+      hibernate:
+        ## SQL logging
+        #        show_sql: true
+        #        format_sql: false
+        hibernate:
+          dialect: org.hibernate.dialect.SQLServerDialect
