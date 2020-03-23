@@ -1,6 +1,6 @@
 spring:
   datasource:
-    url: jdbc:sqlserver://esupgradetest.southeastasia.cloudapp.azure.com:1433;databaseName=EasiShare_DB
+    url: jdbc:sqlserver://easishare.westeurope.cloudapp.azure.com:1433;databaseName=EasiShare_DB
     password: p@ssw0rd
     username: sa
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver

@@ -50,10 +50,10 @@ public class User {
     private boolean isAdmin;
 
     @Column(name = "CompanyId")
-    private int companyId;
+    private Integer companyId;
 
     @Column(name = "InvalidAttempts")
-    private int invalidAttempts;
+    private Integer invalidAttempts;
 
     @Column(name = "LockedAt")
     private Date lockedAt;
@@ -77,10 +77,10 @@ public class User {
     private boolean refreshPolicy;
 
     @Column(name = "DefaultPolicy")
-    private int defaultPolicy;
+    private Integer defaultPolicy;
 
     @Column(name = "PersonalDrive")
-    private int personalDrive;
+    private Integer personalDrive;
 
     @Column(name = "ADAccountName", columnDefinition = "nvarchar")
     private String adAccountName;
@@ -99,4 +99,39 @@ public class User {
 
     @Column(name = "Department", columnDefinition = "nvarchar")
     private Date department;
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "id=" + id +
+                ", userName='" + userName + '\'' +
+                ", fullName='" + fullName + '\'' +
+                ", isExternal=" + isExternal +
+                ", mobile='" + mobile + '\'' +
+                ", status=" + status +
+                ", statusChangedAt=" + statusChangedAt +
+                ", isOverNorm=" + isOverNorm +
+                ", createdAt=" + createdAt +
+                ", mustChangePassword=" + mustChangePassword +
+                ", email='" + email + '\'' +
+                ", isAdmin=" + isAdmin +
+                ", companyId=" + companyId +
+                ", invalidAttempts=" + invalidAttempts +
+                ", lockedAt=" + lockedAt +
+                ", lastAccess=" + lastAccess +
+                ", policy='" + policy + '\'' +
+                ", reminderSentAt=" + reminderSentAt +
+                ", properties='" + properties + '\'' +
+                ", expiryAt=" + expiryAt +
+                ", refreshPolicy=" + refreshPolicy +
+                ", defaultPolicy=" + defaultPolicy +
+                ", personalDrive=" + personalDrive +
+                ", adAccountName='" + adAccountName + '\'' +
+                ", adminRoles='" + adminRoles + '\'' +
+                ", lastUserDeactNotifSentTime=" + lastUserDeactNotifSentTime +
+                ", lastAcctExpiryNotifSentTime=" + lastAcctExpiryNotifSentTime +
+                ", lastPwdExpNotifSentTime=" + lastPwdExpNotifSentTime +
+                ", department=" + department +
+                '}';
+    }
 }
