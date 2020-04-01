@@ -1,3 +1,7 @@
+my:
+  tester1: TestUserFirst
+  tester2: TestUserSecond
+  tester3: TestUserThird
 spring:
   datasource:
     url: jdbc:sqlserver://easishare.northeurope.cloudapp.azure.com:1433;databaseName=EasiShare_DB
@@ -12,7 +16,7 @@ spring:
       ddl-auto: validate
       use-new-id-generator-mappings: false
     properties:
-        hibernate:
-          default_schema: dbo
-          default_catalog: EasiShare_DB
-          dialect: org.hibernate.dialect.SQLServer2012Dialect
+      hibernate:
+        default_schema: dbo
+        default_catalog: EasiShare_DB
+        dialect: org.hibernate.dialect.SQLServer2012Dialect

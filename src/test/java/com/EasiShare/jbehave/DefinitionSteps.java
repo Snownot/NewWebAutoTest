@@ -1,20 +1,21 @@
 package com.EasiShare.jbehave;
 
-import com.EasiShare.servisce.ApiSteps;
+import com.EasiShare.servisce.AuthorisationService;
 import com.EasiShare.steps.EndUserSteps;
 import net.thucydides.core.annotations.Steps;
 import org.jbehave.core.annotations.Given;
 import org.jbehave.core.annotations.When;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
 public class DefinitionSteps {
 
-    @Steps
-    EndUserSteps endUser;
+    @Autowired
+    public AuthorisationService authorisationService;
 
     @Steps
-    ApiSteps apiSteps;
+    EndUserSteps endUser;
 
     @Given("user is on the home page")
     public void userOpenWebPage() {
