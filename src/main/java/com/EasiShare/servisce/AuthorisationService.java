@@ -1,7 +1,7 @@
 package com.EasiShare.servisce;
 
+import com.EasiShare.configuration.TestUsers;
 import com.EasiShare.domain.Repository.UserRepository;
-import com.EasiShare.config.TestUsers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
