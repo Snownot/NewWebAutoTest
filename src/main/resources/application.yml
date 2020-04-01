@@ -1,7 +1,7 @@
 spring:
   datasource:
-    url: jdbc:sqlserver://easishare.westeurope.cloudapp.azure.com:1433;databaseName=EasiShare_DB
-    password: p@ssw0rd
+    url: jdbc:sqlserver://easishare.northeurope.cloudapp.azure.com:1433;databaseName=EasiShare_DB
+    password: root
     username: sa
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
   jpa:
@@ -16,5 +16,3 @@ spring:
           default_schema: dbo
           default_catalog: EasiShare_DB
           dialect: org.hibernate.dialect.SQLServer2012Dialect
-  
-
